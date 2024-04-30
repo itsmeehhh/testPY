@@ -53,11 +53,11 @@ if response.status_code == 200:
         for word in words:
             word_clip = TextClip(
                 txt=word,
-                fontsize=30,  # تغيير حجم الخط
+                fontsize=50,  # تغيير حجم الخط
                 color='white',
                 font='Arial-Bold',
                 size=(720, 1080),
-            ).set_pos('center').set_duration(duration_per_word).set_start(current_time)  # وضع النص في وسط الصورة
+            ).set_pos(('bottom')).set_duration(duration_per_word).set_start(current_time)  # وضع النص في أسفل وسط الصورة
             word_clips.append(word_clip)
             current_time += duration_per_word
 
